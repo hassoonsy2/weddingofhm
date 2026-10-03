@@ -419,19 +419,21 @@ html[lang="ar"] .btn{font-size:.78rem}
   box-shadow:inset 0 1px 0 rgba(255,255,255,.85), 0 16px 40px -30px rgba(90,66,50,.6);
   overflow:hidden;
 }
-.rules .flora{opacity:.3;top:-1.5rem;inset-inline-end:-2rem;width:11rem;transform:scaleX(-1)}
+.rules__botanical{
+  display:block;width:42px;height:84px;margin:0 auto 1rem;
+  color:var(--gold);opacity:.9;pointer-events:none;
+}
 .rule{
   display:grid;grid-template-columns:auto 1fr;gap:1rem;align-items:start;
   text-align:start;padding-block:1.35rem;
 }
 .rule + .rule{border-top:1px solid rgba(176,139,103,.2)}
 .rule__ico{
-  width:2.6rem;height:2.6rem;display:grid;place-items:center;flex:none;
-  border-radius:50%;border:1px solid rgba(176,139,103,.4);color:var(--gold);
-  background:rgba(255,255,255,.45);
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.95);
+  width:44px;height:44px;display:grid;place-items:center;flex:none;
+  border-radius:50%;border:1px solid var(--line);color:var(--ink-soft);
+  background:var(--cream-hi);
 }
-.rule__ico svg{width:1.3rem;height:1.3rem}
+.rule__ico svg{display:block;width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
 .rule__t{font-family:var(--display);font-size:1.16rem;color:var(--ink);line-height:1.4}
 .rule__d{
   font-family:var(--display);font-size:.98rem;line-height:1.8;color:var(--ink-soft);margin-top:.3rem;
@@ -556,7 +558,7 @@ html[lang="ar"] .rule__d{font-size:19px;line-height:1.9}
 html[lang="ar"] .foot{font-size:15px}
 .rv{transform:translateY(14px);transition:opacity 650ms var(--ease),transform 750ms var(--ease)}
 .rv-d1{transition-delay:100ms}.rv-d2{transition-delay:200ms}.rv-d3{transition-delay:300ms}.rv-d4{transition-delay:400ms}
-@media(max-width:420px){.sheet{padding-inline:25px}.sheet::before{inset:10px}.hero{padding-top:90px}.hero__crest{width:76px;height:84px;margin-bottom:16px}.hero .kicker{margin-bottom:18px}.rules{padding-inline:18px}.rule{gap:12px}.rule__ico{width:34px;height:34px}}
+@media(max-width:420px){.sheet{padding-inline:25px}.sheet::before{inset:10px}.hero{padding-top:90px}.hero__crest{width:76px;height:84px;margin-bottom:16px}.hero .kicker{margin-bottom:18px}.rules{padding-inline:18px}.rule{gap:12px}.rule__ico{width:38px;height:38px}}
 @media(prefers-reduced-motion:reduce){.rv{transition:none;transform:none}.scroll-cue svg{animation:none}html{scroll-behavior:auto}}
 
 
@@ -934,8 +936,8 @@ html[lang="ar"] .h-names .amp{margin-block:.16em}
   <!-- RULES -->
   <section>
     <div class="rules rv">
-      <svg class="flora" viewBox="-30 -5 205 215" aria-hidden="true"><use href="#bouquet"/></svg>
       <div class="center" style="position:relative">
+        <svg class="rules__botanical" viewBox="0 0 120 240" aria-hidden="true" focusable="false"><use href="#botanical-spray"/></svg>
         <p class="kicker" data-i18n="rules_kicker"></p>
         <h2 class="h-title emboss" style="margin-top:.6rem" data-i18n="rules_title"></h2>
         <div class="orn" style="margin-block:1.4rem 0">
@@ -945,12 +947,9 @@ html[lang="ar"] .h-names .amp{margin-block:.16em}
 
       <div class="rule" style="position:relative">
         <span class="rule__ico">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M21 8.5v9a2 2 0 0 1-2 2H7"/><path d="M3 6.6A2 2 0 0 1 5 6.5h1.6l1.2-2h6.4l1.2 2H19a2 2 0 0 1 2 2"/>
-            <path d="M3 6.9v10.6a2 2 0 0 0 2 2"/>
-            <path d="M9.6 9.9a3.4 3.4 0 0 0 4.8 4.8"/>
-            <path d="M15.4 13.4A3.4 3.4 0 0 0 12 9.6"/>
-            <path d="M2.2 2.2 21.8 21.8"/>
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M9 6.5 10.2 4.5h4.6l1.2 2H19a2 2 0 0 1 2 2V17M17 19.5H5a2 2 0 0 1-2-2v-9a2 2 0 0 1 .6-1.4"/>
+            <path d="M11.5 9.2a3.6 3.6 0 0 1 4 4M8.5 11.6a3.6 3.6 0 0 0 4.7 4.7M3 3l18 18"/>
           </svg>
         </span>
         <div><div class="rule__t" data-i18n="r1_t"></div><div class="rule__d" data-i18n="r1_d"></div></div>
@@ -958,12 +957,9 @@ html[lang="ar"] .h-names .amp{margin-block:.16em}
 
       <div class="rule" style="position:relative">
         <span class="rule__ico">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M12 2.5v19" stroke-dasharray="2.5 2.5"/>
-            <path d="M2 20v-2.2a3.2 3.2 0 0 1 3.2-3.2h1.6A3.2 3.2 0 0 1 10 17.8V20"/>
-            <circle cx="6" cy="8.4" r="2.7"/>
-            <path d="M14 20v-2.2a3.2 3.2 0 0 1 3.2-3.2h1.6a3.2 3.2 0 0 1 3.2 3.2V20"/>
-            <circle cx="18" cy="8.4" r="2.7"/>
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M3 20V8.5a3 3 0 0 1 6 0V20Zm12 0V8.5a3 3 0 0 1 6 0V20ZM12 4v16M2 20h8m4 0h8"/>
+            <path d="M6.8 13.5h.4m9.6 0h.4"/>
           </svg>
         </span>
         <div><div class="rule__t" data-i18n="r2_t"></div><div class="rule__d" data-i18n="r2_d"></div></div>
@@ -971,10 +967,9 @@ html[lang="ar"] .h-names .amp{margin-block:.16em}
 
       <div class="rule" style="position:relative">
         <span class="rule__ico">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="12" cy="7" r="3"/>
-            <path d="M6.5 20v-2.5A5.5 5.5 0 0 1 12 12a5.5 5.5 0 0 1 4.2 1.9"/>
-            <path d="M2.2 2.2 21.8 21.8"/>
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M10 3.5a8.6 8.6 0 1 0 10.5 11.8A7.6 7.6 0 0 1 10 3.5Z"/>
+            <path d="m18 3 .8 2.7L21.5 6.5l-2.7.8L18 10l-.8-2.7-2.7-.8 2.7-.8Z"/>
           </svg>
         </span>
         <div><div class="rule__t" data-i18n="r3_t"></div><div class="rule__d" data-i18n="r3_d"></div></div>
